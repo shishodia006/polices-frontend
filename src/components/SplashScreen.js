@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 
-import introVideo from "../assets/videos/intro.mp4";
+
 import "./SplashScreen.css";
 
 export default function SplashScreen({ onFinish }) {
@@ -43,8 +43,8 @@ export default function SplashScreen({ onFinish }) {
     <div className="splash-wrapper">
       <video
         ref={videoRef}
-        src={introVideo}
-        autoPlay
+        src="videos/intro.mp4"
+        autoPlay  
         muted
         playsInline
         className="video-element"
