@@ -13,10 +13,6 @@ import thumbVideo3 from "../assets/videos/c2963.mp4";
 import thumbVideo4 from "../assets/videos/c2966.mp4";
 
 
-
-
-
-
 const videos = [
   { id: 1, thumbnail: thumb1, src: thumbVideo1 },
   { id: 2, thumbnail: thumb2, src: thumbVideo2 },
