@@ -43,7 +43,7 @@ export default function SplashScreen({ onFinish }) {
     <div className="splash-wrapper">
       <video
         ref={videoRef}
-        src="videos/intro.mp4"
+        src="/videos/intro.mp4"
         autoPlay  
         muted
         playsInline
