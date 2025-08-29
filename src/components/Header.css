@@ -1,0 +1,134 @@
+/* Base header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 42px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+/* Responsive logo */
+@media (max-width: 768px) {
+  .logo {
+    width: 160px;
+  }
+  .header {
+      padding: 14px 30px;
+ 
+}
+}
+@media (max-width: 480px) {
+  .logo {
+    width: 160px;
+  }
+    .header {
+      padding: 14px 20px;
+ 
+}
+}
+
+/* Desktop menu */
+.desktop-menu {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2A2A2A;
+  font-size: 16px;
+  font-family: Roboto, sans-serif;
+  transition: all 0.3s ease;
+  padding: 6px 0;
+}
+
+.nav-links a.active {
+  color: #FF611F;
+  border-bottom: 2px solid #FF611F;
+}
+
+/* Mobile menu icon hidden on desktop */
+.mobile-menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* Offcanvas Menu */
+.offcanvas {
+  position: fixed;
+  top: 0;
+  right: -280px;  /* hidden initially */
+  width: 280px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+}
+
+.offcanvas.show {
+  right: 0; /* slide in */
+}
+
+.offcanvas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 4px solid #12305E;
+}
+
+.offcanvas .logo {
+  width: 140px;
+}
+
+.offcanvas-links {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 15px;
+}
+
+.offcanvas-links a {
+  text-decoration: none;
+  color: #12305E;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.offcanvas-links a.active {
+  font-weight: bold;
+  color: #FF611F;
+}
+
+/* Overlay */
+.overlay {
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 1050;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .desktop-menu {
+    display: none;
+  }
+  .mobile-menu-icon {
+    display: block;
+  }
+}

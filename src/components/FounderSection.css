@@ -1,0 +1,49 @@
+.founder-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-card {
+border-radius: 15px;
+opacity: 0.9;
+background: #FFF;
+backdrop-filter: blur(65.30000305175781px);
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  padding: 10px;
+  /* transition: all 0.4s ease; */
+    transition: background-color 0.4s ease, box-shadow 0.4s ease; /* instead of all */
+    
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  
+}
+
+
+
+
+.overlay-card.large {
+  height: auto;
+}
+
+
+.our-team-title{
+  color: #12305E;
+font-family: "DM Serif Display";
+font-size: 44px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.our-team-text{
+  color: #2A2A2A;
+font-family: Roboto;
+font-size: 36px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+
+}
+
+

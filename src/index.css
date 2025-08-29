@@ -1,0 +1,36 @@
+/* ===== Base Styles ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+  /* optional */
+  color: #222;
+  /* optional */
+  line-height: 1.6;
+}
+
+/* ===== Headings (Serif Font) ===== */
+
+.heading-serif {
+  font-family: 'DM Serif Display', serif;
+}
+
+/* ===== Body Text (Roboto) ===== */
+p,
+span,
+li,
+a,
+button,
+input,
+textarea {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/* ===== Code blocks (optional) ===== */
+code {
+  font-family: 'Source Code Pro', monospace;
+}

@@ -1,0 +1,126 @@
+.map-container {
+  position: relative;
+  width: 500px;
+  /* set exact size for pixel perfect */
+  height: auto;
+  right: 160px;
+}
+
+.custom-modal-width {
+  max-width: 90%;
+  /* ya koi bhi percentage/px */
+  width: 100%;
+  border-radius: 25px;
+  /* aap jitna chahein radius de sakte ho */
+  overflow: hidden;
+
+}
+
+
+.map-image {
+  width: 700.805px;
+  flex-shrink: 0;
+  height: auto;
+  display: block;
+}
+
+.marker {
+  position: absolute;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  /* This creates the extra clickable area */
+  padding: 15px;
+  /* Transparent background so it doesn't show */
+  background: transparent;
+  /* Ensures the click area respects padding */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marker svg {
+  pointer-events: none;
+  /* Allow container to handle clicks */
+}
+
+.modal-header {
+  border-radius: 22px;
+  background: #F8EBDF;
+  margin: 20px;
+  padding: 10px 20px;
+}
+
+.modal-title {
+  color: #FF611F;
+  font-family: "DM Serif Display";
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 400;
+
+  text-transform: capitalize;
+}
+
+.modal-body {
+  padding: 0px 23px;
+}
+
+
+
+.overlay-card .card-title {
+  color: #2A2A2A;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  /* 100% */
+
+
+}
+
+.overlay-card .card-text {
+  color: #000;
+  text-align: start;
+  font-family: Roboto;
+  /* font-size: 12px; */
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+  /* 141.667% */
+}
+
+/* ------------------ RESPONSIVE MEDIA QUERIES ------------------ */
+@media (max-width: 768px) {
+  .map-container {
+    max-width: 100%;
+    right: 0;
+  }
+
+  .map-image {
+    max-width: 100%;
+  }
+
+  .modal-title {
+    font-size: 22px;
+  }
+
+  .overlay-card .card-title {
+    font-size: 14px;
+  }
+
+  .overlay-card .card-text {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-header {
+    margin: 10px;
+    padding: 8px 12px;
+  }
+
+  .modal-title {
+    font-size: 18px;
+  }
+}
+

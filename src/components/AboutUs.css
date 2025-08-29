@@ -1,0 +1,162 @@
+.about-section {
+  background-color: #fff;
+  color: #2c2c2c;
+}
+
+.about_heading {
+  color: #12305E;
+  text-align: center;
+  font-family: "DM Serif Display";
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media (max-width: 768px) {
+  .about_heading {
+    font-size: 40px;
+  }
+}
+
+/* For mobile phones (max width 480px) */
+@media (max-width: 480px) {
+  .about_heading {
+    font-size: 32px;
+  }
+}
+
+.about_subtext {
+  color: #2A2A2A;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  /* 125% */
+
+}
+
+.highlight-box {
+  border-radius: 18px;
+  background: rgba(255, 97, 31, 0.16);
+}
+
+.highlight-box p {
+  color: #4F4F4F;
+  padding: 20px 60px;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  /* 116.667% */
+}
+
+
+.icon-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  /* small screen पर wrap हो जाएगा */
+
+}
+
+.icon-section p {
+  color: #12305E;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  /* 130% */
+
+  justify-content: center;
+
+  align-items: center;
+
+}
+
+.icon-card {
+  display: flex;
+  width: 106px;
+  height: 106px;
+  padding: 20px 24px;
+  justify-content: center!important;
+  border-radius: 5px;
+background: #F5FAFF;
+  align-items: center;
+  gap: 10px;
+margin: 0 auto; /* centers horizontally */
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+
+
+.icon-card:hover {
+  background-color: #e8f2ff;
+  transform: translateY(-5px);
+}
+
+.icon-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #0b4da2;
+  font-weight: 500;
+}
+
+.social-icons {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  /* icons ke beech gap */
+  padding: 0;
+
+  margin: 0;
+}
+
+.social-icons li {
+  display: flex;
+  align-items: center;
+}
+
+.subscribe-form {
+  width: 420px;
+  /* Tum apne hisab se change kar sakte ho */
+  display: flex;
+  flex-direction: column;
+
+}
+
+.subscribe-form input {
+  border-radius: 5px;
+  border: 1px solid #DCDCDC;
+  background: #F3F3F3;
+}
+
+.name-subscribe {
+  display: flex;
+  gap: 5px;
+}
+
+.name-subscribe input {
+  flex: 1;
+}
+
+.name-subscribe button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #e8effc;
+  color: #1a2b5f;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.name-subscribe button:hover {
+  background-color: #d0defa;
+}

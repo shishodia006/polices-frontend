@@ -1,0 +1,76 @@
+.collab_section {
+  border-radius: 39px;
+  padding: 20px 0;
+  background: #E7F0FC;
+}
+
+.collab_section h2 {
+  font-family: DM Serif Text;
+  color: #12305E;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 35px;
+  line-height: 46px;
+  letter-spacing: 2%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Tablet and below */
+@media (max-width: 992px) {
+  .collab_section h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .collab_section h2 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+.collab_section p {
+  font-family: Roboto;
+  font-weight: 600;
+  font-style: Medium;
+  font-size: 16px;
+  color: #000000;
+  line-height: 28.5px;
+  letter-spacing: 2%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.collab_btn {
+  border-radius: 16px;
+  max-width: 100%;
+  white-space: normal;
+  word-wrap: break-word;
+  background: #FF611F;
+  color: #FFF;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  padding: 11px 16px;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  text-align: center;
+  vertical-align: middle;
+  color: #FFFFFF;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .collab_btn {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,69 @@
+.video-element.fade-out {
+  animation: fadeOut 0.5s ease forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(0.95); /* thoda shrink hoke smooth lagega */
+  }
+}
+
+.splash-wrapper.bg-white {
+  background-color: white;
+}
+
+.splash-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background: linear-gradient(135deg, #ff611f, #28a745); */
+  background-color: #fff;
+  padding: 5px;
+  box-shadow: 6px -3px 23.9px 0 rgba(97, 140, 207, 0.19);
+   transition: background-color 0.5s ease; /* smooth white background */
+}
+
+/* Video fade out */
+.video-element.fade-out {
+  animation: fadeOut 0.7s ease forwards;
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+.video-element {
+  /* width: 500px; */
+  max-width: 90%;
+  border-radius: 25px;
+  clip-path: inset(5px round 25px);
+  display: block;
+}
+
+/* Logo Animation */
+.logo-fly {
+  position: fixed; /* fixed karo taaki viewport ke hisaab se move ho */
+  top: 50%;  /* pehle center me rakha */
+  left: 50%;
+  transform: translate(-50%, -50%); /* exact center */
+  width: 120px;
+  z-index: 9999;
+  animation: flyToHeader 1.5s forwards ease-in-out;
+}
+
+/* Animation: center se top-left header me fly karega */
+@keyframes flyToHeader {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    top: 20px;   /* header ki exact padding ke hisaab se adjust karo */
+    left: 20px;  /* header ke logo ka x position */
+    transform: scale(0.5); /* chhota hoke smoothly header logo ban jayega */
+    opacity: 1;
+  }
+}

@@ -1,0 +1,99 @@
+.hover-card {
+    padding: 10px;
+    position: relative;
+    box-shadow: none;
+     box-sizing: border-box;
+       overflow: visible; /* allow visible zoom outside */
+
+}
+.card-slider-container {
+  width: 95%;
+  margin: auto;
+}
+.hover-card-inner {
+    position: relative;
+      border-radius: 28px; /* same as img and overlay */
+     /* overflow: visible; */
+    overflow: hidden;
+    /* border-radius: 12px; */
+    /* box-shadow: 0 4px 12px rgba(0,0,0,0.2); */
+    transition: transform 0.3s ease;
+     overflow: hidden; 
+       overflow: hidden; /* keep overlay + image clipped properly */
+     
+}
+
+.hover-card-inner img {
+    width: 100%;
+    border-radius: 28px; /* round corner thoda simplify kiya */
+    height: auto; /* height automatic based on width */
+    /* aspect-ratio: 16/9;  */
+    object-fit: cover;
+   
+    display: block;
+    transition: transform 0.3s ease; /* smooth hover effect */
+}
+
+.hover-card-inner:hover {
+    /* transform: scale(1.1); */
+     transform: scale(1.05); /* thoda kam zoom rakho for better look */
+  border-radius: 28px; /* maintain rounded corners */
+  z-index: 5; /* bring hovered card on top of others */
+}
+
+.hover-overlay {
+    position: absolute;
+    inset: 0;
+    background: #FFF;
+    margin: 20px 20px;
+    border-radius: 28px;
+    gap: 10px;
+    flex-shrink: 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    text-align: center;
+    padding: 20px;
+      max-height: none; /* ensures content isn't clipped */
+}
+
+.hover-overlay h3 {
+    color: #12305E;
+    text-align: center;
+    -webkit-text-stroke-width: 0.63px;
+    -webkit-text-stroke-color: #12305E;
+    font-family: "DM Serif Display";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    /* 37.992px */
+}
+
+.hover-overlay p {
+    color: #2A2A2A;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    /* 25.328px */
+}
+
+.hover-card-inner:hover .hover-overlay {
+    opacity: 1;
+}
+
+.slick-dots li button:before {
+    font-size: 12px;
+    color: #333;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #ff6600;
+}

@@ -1,0 +1,53 @@
+.nav-tabs .nav-link {
+  white-space: nowrap;
+  color: #959595;
+     
+  text-align: center;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  padding-bottom: 0!important;
+  margin-bottom: 0!important;
+  font-weight: 500;
+
+  /* 144.516% */
+
+}
+
+.nav-tabs .nav-link.active {
+  color: #2A2A2A;
+  font-style: normal;
+   background-color: #e8f2ff!important;
+   font-size: 15px;
+  font-weight: 600;
+   padding-bottom: 0!important;
+  margin-bottom: 0!important;
+
+  /* 140% */
+}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover{
+  border-color: #fff;
+  border: none;
+}
+.bg-tab h2{
+font-size: 1.6rem;
+}
+.bg-cta {
+  background-color: #E1EAFF;
+  border-radius: 59px;
+  display: inline;
+  font-family: DM Serif Display;
+  font-weight: 500;
+  font-style: Regular;
+  font-size: 32px;
+  line-height: 28.55px;
+  text-align: center;
+  vertical-align: middle;
+}
+.nav-tabs {
+  -webkit-overflow-scrolling: touch; /* smooth scrolling iOS */
+}
+
+.nav-tabs::-webkit-scrollbar {
+  display: none; /* scrollbar hide */
+}
