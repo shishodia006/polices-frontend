@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+
 import introVideo from "../assets/videos/intro.mp4";
 import "./SplashScreen.css";
 
