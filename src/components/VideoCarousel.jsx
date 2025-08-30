@@ -7,11 +7,6 @@ import thumb3 from "../assets/images/thumb-3.png";
 import thumb4 from "../assets/images/thumb-4.png";
 import thumbicon from "../assets/images/thumb-icon.png";
 
-// import thumbVideo1 from "../assets/videos/c2958.mp4";
-// import thumbVideo2 from "../assets/videos/c2961.mp4";
-// import thumbVideo3 from "../assets/videos/c2963.mp4";
-// import thumbVideo4 from "../assets/videos/c2966.mp4";
-
 
 const videos = [
   { id: 1, thumbnail: thumb1, src: "/videos/c2958.mp4" },
