@@ -3,20 +3,18 @@ import "./SplashScreen.css";
 
 export default function SplashScreen({ onFinish }) {
   const videoRef = useRef(null);
-  const [shouldShow, setShouldShow] = useState(false);
   const [videoLoaded, setVideoLoaded] = useState(false);
 
   useEffect(() => {
     const splashSeen = sessionStorage.getItem("splashSeen");
     if (splashSeen) {
+      // pehle se dekhi hui tab me skip karo
       if (onFinish) onFinish();
-    } else {
-      setShouldShow(true);
     }
   }, [onFinish]);
 
   useEffect(() => {
-    if (shouldShow && videoRef.current) {
+    if (videoRef.current) {
       videoRef.current.playbackRate = 3;
 
       videoRef.current.onended = () => {
@@ -24,12 +22,10 @@ export default function SplashScreen({ onFinish }) {
         sessionStorage.setItem("splashSeen", "true");
         setTimeout(() => {
           if (onFinish) onFinish();
-        }, 500);
+        }, 500); // thoda delay for smooth transition
       };
     }
-  }, [shouldShow, onFinish]);
-
-  if (!shouldShow) return null;
+  }, [onFinish]);
 
   return (
     <div className="splash-wrapper">
@@ -48,9 +44,9 @@ export default function SplashScreen({ onFinish }) {
         autoPlay
         muted
         playsInline
-        preload="none"         // ✅ preload none for faster homepage render
+        preload="auto" // preload auto for smoother playback
         className="video-element"
-        onCanPlay={() => setVideoLoaded(true)} // ✅ video ready, hide placeholder
+        onCanPlay={() => setVideoLoaded(true)}
       />
     </div>
   );
