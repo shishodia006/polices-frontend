@@ -1,10 +1,8 @@
 import React from "react";
-// import frameimg1 from "../assets/images/frame-1.png";
-// import frameimg2 from "../assets/images/Frame-2.png";
-// import frameimg3 from "../assets/images/frame-3.png";
-import frameimg1 from "../assets/images/slide-2.jpg";
-import frameimg2 from "../assets/images/slide-1.jpg";
-import frameimg3 from "../assets/images/slide-3.jpg";
+
+import frameimg1 from "../assets/images/slide-2.png";
+import frameimg2 from "../assets/images/slide-1.png";
+import frameimg3 from "../assets/images/slide-3.png";
 import "./HomeSlider.css";
 const HomeSlider = () => {
   return (
