@@ -41,18 +41,14 @@ export default function SplashScreen({ onFinish }) {
 
   return (
     <div className="splash-wrapper">
-   <video 
-  ref={videoRef} 
-  autoPlay 
-  muted 
-  playsInline 
-  controls
-  className="video-element"
->
-  <source src="/videos/intro.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-
+      <video
+        ref={videoRef}
+        src="/videos/intro.mp4"
+        autoPlay  
+        muted
+        playsInline
+        className="video-element"
+      />
     </div>
   );
 }
