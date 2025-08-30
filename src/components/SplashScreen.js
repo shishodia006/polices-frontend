@@ -1,52 +1,44 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./SplashScreen.css";
+import { INTRO } from "../utils/constants"; // ✅ import the intro video
 
 export default function SplashScreen({ onFinish }) {
   const videoRef = useRef(null);
-  const [videoLoaded, setVideoLoaded] = useState(false);
+  const [shouldShow, setShouldShow] = useState(false);
 
   useEffect(() => {
     const splashSeen = sessionStorage.getItem("splashSeen");
     if (splashSeen) {
-      // pehle se dekhi hui tab me skip karo
       if (onFinish) onFinish();
+    } else {
+      setShouldShow(true);
     }
   }, [onFinish]);
 
   useEffect(() => {
-    if (videoRef.current) {
+    if (shouldShow && videoRef.current) {
       videoRef.current.playbackRate = 3;
-
       videoRef.current.onended = () => {
         document.body.style.backgroundColor = "#fff";
         sessionStorage.setItem("splashSeen", "true");
         setTimeout(() => {
           if (onFinish) onFinish();
-        }, 500); // thoda delay for smooth transition
+        }, 500);
       };
     }
-  }, [onFinish]);
+  }, [shouldShow, onFinish]);
+
+  if (!shouldShow) return null;
 
   return (
     <div className="splash-wrapper">
-      {/* Placeholder / loader */}
-      {!videoLoaded && (
-        <img
-          src="/images/video-placeholder.jpg"
-          alt="Loading..."
-          className="video-placeholder"
-        />
-      )}
-
       <video
         ref={videoRef}
-        src="/videos/intro.mp4"
+        src={INTRO}       // ✅ Use the CDN video here
         autoPlay
         muted
         playsInline
-        preload="auto" // preload auto for smoother playback
         className="video-element"
-        onCanPlay={() => setVideoLoaded(true)}
       />
     </div>
   );

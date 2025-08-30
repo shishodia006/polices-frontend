@@ -8,12 +8,14 @@ import thumb4 from "../assets/images/thumb-4.png";
 import thumbicon from "../assets/images/thumb-icon.png";
 
 
+
 const videos = [
-  { id: 1, thumbnail: thumb1, src: "/videos/c2958.mp4" },
-  { id: 2, thumbnail: thumb2, src: "/videos/c2961.mp4" },
-  { id: 3, thumbnail: thumb3, src: "/videos/c2963.mp4" },
-  { id: 4, thumbnail: thumb4, src: "/videos/c2966.mp4" },
+  { id: 1, thumbnail: thumb1, src: "https://ik.imagekit.io/gboougic6/videos/c2958.mp4" },
+  { id: 2, thumbnail: thumb2, src: "https://ik.imagekit.io/gboougic6/videos/c2961.mp4" },
+  { id: 3, thumbnail: thumb3, src: "https://ik.imagekit.io/gboougic6/videos/c2963.mp4" },
+  { id: 4, thumbnail: thumb4, src: "https://ik.imagekit.io/gboougic6/videos/c2966.mp4" },
 ];
+
 export default function VideoCarousel() {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
@@ -198,10 +200,12 @@ export default function VideoCarousel() {
 
             {/* Video Section */}
             <div style={{ padding: "25px 25px 10px 25px" }}>
+
               <video
                 src={selectedVideo}
                 controls
                 autoPlay
+                preload="auto" // <--- ye add karo
                 style={{
                   width: "100%",
                   height: "auto",
@@ -209,6 +213,7 @@ export default function VideoCarousel() {
                   background: "#D9D9D9",
                 }}
               />
+
             </div>
 
             {/* Thumbnail Section */}
