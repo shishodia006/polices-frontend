@@ -1,35 +1,27 @@
 import React, { useEffect, useRef, useState } from "react";
-
-
 import "./SplashScreen.css";
 
 export default function SplashScreen({ onFinish }) {
   const videoRef = useRef(null);
   const [shouldShow, setShouldShow] = useState(false);
+  const [videoLoaded, setVideoLoaded] = useState(false);
 
   useEffect(() => {
-    // Check sessionStorage (not localStorage)
     const splashSeen = sessionStorage.getItem("splashSeen");
-
     if (splashSeen) {
-      // agar pehle hi current tab me dekh liya hai -> skip karo
       if (onFinish) onFinish();
     } else {
-      // agar first time current tab me aaye hain -> splash show karo
       setShouldShow(true);
     }
   }, [onFinish]);
 
   useEffect(() => {
     if (shouldShow && videoRef.current) {
-      videoRef.current.playbackRate = 3; // video speed 3x
+      videoRef.current.playbackRate = 3;
 
       videoRef.current.onended = () => {
         document.body.style.backgroundColor = "#fff";
-
-        // mark splash as seen for current tab only
         sessionStorage.setItem("splashSeen", "true");
-
         setTimeout(() => {
           if (onFinish) onFinish();
         }, 500);
@@ -37,17 +29,28 @@ export default function SplashScreen({ onFinish }) {
     }
   }, [shouldShow, onFinish]);
 
-  if (!shouldShow) return null; // agar splash nahi dikhana hai
+  if (!shouldShow) return null;
 
   return (
     <div className="splash-wrapper">
+      {/* Placeholder / loader */}
+      {!videoLoaded && (
+        <img
+          src="/images/video-placeholder.jpg"
+          alt="Loading..."
+          className="video-placeholder"
+        />
+      )}
+
       <video
         ref={videoRef}
         src="/videos/intro.mp4"
-        autoPlay  
+        autoPlay
         muted
         playsInline
+        preload="none"         // ✅ preload none for faster homepage render
         className="video-element"
+        onCanPlay={() => setVideoLoaded(true)} // ✅ video ready, hide placeholder
       />
     </div>
   );
