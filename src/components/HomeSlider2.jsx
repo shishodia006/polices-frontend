@@ -1,7 +1,8 @@
 import React from "react";
-import frameimg1 from "../assets/images/frame-1.png";
-import frameimg2 from "../assets/images/Frame-2.png";
-import frameimg3 from "../assets/images/frame-3.png";
+
+import frameimg1 from "../assets/images/slide-2.png";
+import frameimg2 from "../assets/images/slide-1.png";
+import frameimg3 from "../assets/images/slide-3.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -56,7 +57,7 @@ const HomeSlider = () => {
               display: "flex",
               flexDirection: "column",
               justifyContent: "flex-end",
-              padding: "20px",
+              padding: "80px 25px",
               color: "#fff",
             }}
           >

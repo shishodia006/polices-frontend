@@ -12,7 +12,7 @@ import delhiimg5 from "../assets/images/saymyta.png";
 import delhiimg6 from "../assets/images/sharath.png";
 import andhraimg7 from "../assets/images/srikant.png";
 import andhraimg8 from "../assets/images/Anil-kumar.png";
-import andhraimg9 from "../assets/images/kiran.png";
+
 import andhraimg10 from "../assets/images/prakash.png";
 import heyimg11 from "../assets/images/chit.png";
 import heyimg12 from "../assets/images/sri.png";
@@ -76,7 +76,6 @@ const regions = [
         people: [
             { name: "Srikanth Potharaju", role: "Manager, Design Team", additionalInfo: "An alumnus of JNAFAU, Hyderabad, Srikanth began his career at Doordarshan and went on to specialise in political communication. He has led design for multiple election campaigns in Andhra Pradesh, crafting sharp, strategy-driven visuals.", img: andhraimg7 },
             { name: "Anil kumar", role: "Graphic Designer", additionalInfo: "Anil is a designer with experience across fashion, tech, and media. At Politics for Impact, he creates compelling campaign visuals, blending creativity with a strong understanding of design trends and communication.", img: andhraimg8 },
-           
             { name: "Prakash Tatineni", role: "Senior Graphic & Video Editor", additionalInfo: "An IIT Guwahati alumnus, Prakash brings an entrepreneurial spirit and strong ground-level political insight. With experience in campaign strategy, branding, and multimedia production, he delivers innovative, results-driven content.", img: andhraimg10 },
             { name: "G.H.V. Prasad", role: "Governance Associate", additionalInfo: "Prasad specializes in grassroots campaigning, policy research, and digital strategy. He has supported leaders like Adireddy Vasu, Paritala Sriram, and Viresh Chandra Dev, contributing to winning campaigns and impactful public outreach.", img: andhraimg26 },
             { name: "Korada Hari Krishna", role: "Governance Associate", additionalInfo: "Hari Krishna is a political consultant and digital strategist, currently serving as Personal Secretary to Visakhapatnam MP Sribharat Mathukumilli. He focuses on narrative building, grassroots outreach, and strategic communication.", img: andhraimg27 },
@@ -100,12 +99,26 @@ const regions = [
 ];
 
 // Markers data
-const markers = [
-    { id: 1, top: "26.5%", left: "44%", title: "Delhi" },
-    { id: 2, top: "66%", left: "53%", title: "Hyderabad" },
-    { id: 3, top: "76%", left: "52%", title: "Andhra Pradesh" },
-    { id: 4, top: "78%", left: "35%", title: "Bangalore" },
-];
+const getMarkers = () => {
+    if (window.innerWidth <= 480) {
+        // Mobile
+        return [
+            { id: 1, top: "25%", left: "30%", title: "Delhi" },
+            { id: 2, top: "63%", left: "38%", title: "Hyderabad" },
+            { id: 3, top: "74%", left: "37%", title: "Andhra Pradesh" },
+            { id: 4, top: "76%", left: "26%", title: "Bangalore" },
+        ];
+    } else {
+        // Desktop
+        return [
+            { id: 1, top: "26.5%", left: "44%", title: "Delhi" },
+            { id: 2, top: "66%", left: "53%", title: "Hyderabad" },
+            { id: 3, top: "76%", left: "52%", title: "Andhra Pradesh" },
+            { id: 4, top: "78%", left: "35%", title: "Bangalore" },
+        ];
+    }
+};
+
 
 const getRegionByMarker = (markerId) => {
     switch (markerId) {
@@ -133,12 +146,13 @@ export default function MapWithMarkers() {
             <img src={mapimg} alt="India Map" className="map-image" />
 
             {/* SVG markers with tooltip */}
-            {markers.map((marker) => (
+            {getMarkers().map(marker => (
                 <OverlayTrigger
                     key={marker.id}
                     placement="top"
                     overlay={<Tooltip>{marker.title}</Tooltip>}
                 >
+
                     <div
                         className="marker"
                         style={{ top: marker.top, left: marker.left }}
