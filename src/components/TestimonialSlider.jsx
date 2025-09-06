@@ -2,21 +2,22 @@ import React, {  } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import testimonialImg from "../assets/images/fatima.png"; // aap image path change karo
+import testimonialImg from "../assets/images/Mousumi-Gupta.png"; // aap image path change karo
 
 const testimonials = [
     {
-        name: "Fatma",
-        role: "Parliament in Action 2.0 Participant",
-        text: `As a political science student, I thought I already knew about Zero Hour and Question Hour. But this workshop showed me what textbooks never could—the real meaning behind those procedures and the effort it takes to implement them. Understanding how Parliament functions behind the scenes was eye-opening. We often learn what happens in Parliament, but rarely how it actually works. This experience changed that for me.`,
+        name: "Mousumi Gupta",
+        role: "Director, Government Affairs @Humane World for Animals",
+        text: `We are delighted to partner with Politics for Impact in strengthening our engagement with Members of Parliament. Over the last six months, we have seen the value of strategic legislative preparation and dialogues with MPs. This partnership will enable us to deepen these efforts, create meaningful policy conversations, and advance the cause of animal welfare at the highest levels of governance.`,
         img: testimonialImg,
     },
     {
-        name: "Fatma",
-        role: "Parliament in Action 2.0 Participant",
-        text: `As a political science student, I thought I already knew about Zero Hour and Question Hour. But this workshop showed me what textbooks never could—the real meaning behind those procedures and the effort it takes to implement them. Understanding how Parliament functions behind the scenes was eye-opening. We often learn what happens in Parliament, but rarely how it actually works. This experience changed that for me.`,
+        name: "Mousumi Gupta",
+        role: "Director, Government Affairs @Humane World for Animals",
+        text: `We are delighted to partner with Politics for Impact in strengthening our engagement with Members of Parliament. Over the last six months, we have seen the value of strategic legislative preparation and dialogues with MPs. This partnership will enable us to deepen these efforts, create meaningful policy conversations, and advance the cause of animal welfare at the highest levels of governance.`,
         img: testimonialImg,
     },
+   
 
     // aur testimonials add kar sakte ho
 ];
@@ -78,7 +79,7 @@ const TestimonialSlider = () => {
                                     <img
                                         src={testimonial.img}
                                         alt={testimonial.name}
-                                        className="rounded-circle border border-white shadow"
+                                        className="rounded-circle  border-white shadow advance_border"
                                         style={{ width: "120px", height: "120px", objectFit: "cover", marginLeft: "-65px" }}
                                     />
                                 </div>
