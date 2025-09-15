@@ -6,7 +6,7 @@ import HomeSlider2 from "./HomeSlider2";
 const HeroSection = () => {
   return (
     <>
-      <p
+      {/* <p
         className="highlight-text"
         style={{
           textAlign: "center",
@@ -24,8 +24,8 @@ const HeroSection = () => {
         >
           Apply Now
         </a>
-      </p>
-      <div className="container pb-5 px-0">
+      </p> */}
+      <div className="container py-4 px-0">
        <div className="row align-items-center">
           {/* Left content */}
           <div className="hero col-lg-5  text-center text-lg-start my-auto">
