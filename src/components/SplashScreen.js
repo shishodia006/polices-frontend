@@ -16,16 +16,27 @@ export default function SplashScreen({ onFinish }) {
   }, [onFinish]);
 
   useEffect(() => {
-    if (shouldShow && videoRef.current) {
-      videoRef.current.playbackRate = 3;
-      videoRef.current.onended = () => {
-        document.body.style.backgroundColor = "#fff";
-        sessionStorage.setItem("splashSeen", "true");
-        setTimeout(() => {
-          if (onFinish) onFinish();
-        }, 500);
-      };
-    }
+    if (!shouldShow || !videoRef.current) return;
+
+    const finish = (markSeen) => {
+      document.body.style.backgroundColor = "#fff";
+      if (markSeen) sessionStorage.setItem("splashSeen", "true");
+      setTimeout(() => {
+        if (onFinish) onFinish();
+      }, 500);
+    };
+
+    videoRef.current.playbackRate = 3;
+    videoRef.current.onended = () => finish(true);
+    // ✅ Agar video load na ho paaye (403/network/etc), splash skip karke
+    // seedha homepage dikhao — white screen na aaye
+    videoRef.current.onerror = () => finish(false);
+
+    // ✅ Safety net: video stuck reh jaaye (na ended, na error) to bhi
+    // homepage aa jaye
+    const fallbackTimer = setTimeout(() => finish(false), 6000);
+
+    return () => clearTimeout(fallbackTimer);
   }, [shouldShow, onFinish]);
 
   if (!shouldShow) return null;
