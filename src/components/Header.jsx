@@ -4,7 +4,7 @@ import logoimg from "../assets/images/Politics-for-Impact.png";
 import { FiMenu, FiX } from "react-icons/fi";
 
 const Header = () => {
-  const [active, setActive] = useState(window.location.pathname);
+  const active = window.location.pathname;
   const [isOpen, setIsOpen] = useState(false);
 
   return (

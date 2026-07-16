@@ -3,7 +3,6 @@
 import React from 'react';
 import ImpactInternship from '../components/ImpactInternship';
 import ParliamentInAction from '../components/ParliamentInAction';
-import CollaborateSection from '../components/CollaborateSection';
 import CollaborateWithUs from '../components/CollaborateWithUs';
 import { Container, Row, Col } from "react-bootstrap";
 import footerlogo from "../assets/images/footer-logo.png";

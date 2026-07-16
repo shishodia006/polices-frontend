@@ -5,7 +5,6 @@ import KeyVerticals from '../components/KeyVerticals';
 import ResearchPolicy from '../components/ResearchPolicy';
 import ProgramsPolicyAdvocacy from '../components/ProgramsPolicyAdvocacy';
 import StrategyCommunications from '../components/StrategyCommunications';
-import workimg from '../assets/images/work.png';
 import { Container, Row, Col } from "react-bootstrap";
 import footerlogo from "../assets/images/footer-logo.png";
 const OurWork = () => {

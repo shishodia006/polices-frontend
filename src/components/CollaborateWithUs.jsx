@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Collapse } from 'react-bootstrap';
 import illustrateimg from '../assets/images/illustration.png';
-import { BiFontSize } from 'react-icons/bi';
 const CollaborateWithUs = () => {
 const [open, setOpen] = useState(false);
 
